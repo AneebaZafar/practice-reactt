@@ -1,0 +1,167 @@
+
+
+
+/* Selection Fields */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.search-bar:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.001);
+}
+
+/* Error Message */
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Selection Result */
+.selected {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .config-panel {
+    width: 80%;
+  }
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+.header {
+  text-align: center; 
+  padding-top: 0px; 
+  font-size: 24px; 
+  font-weight: bold;
+  margin: 0;  /* Remove default margin */
+  position: absolute;
+  top: 0; /* Stick it to the very top */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  background: rgba(53, 54, 55, 0.262); /* Optional: Set a background */
+  z-index: 1000; /* Ensure it stays on top */
+  padding: 10px 0; /* Adjust padding if needed */
+  color:rgb(233, 71, 71);
+}
+
+
+.navbar {
+  width: 200px;
+  height: 100vh; /* Full height */
+  background: rgba(0, 0, 50, 0.9); /* Dark background */
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.navbar button:hover {
+  color: #ffcc00; /* Highlight color */
+}
+
+/* Adjust Dashboard to Avoid Overlap */
+.dashboard {
+  margin-left: 220px; /* Push content right to avoid overlap */
+  padding: 20px;
+}
+
+/* Config Panel Position */
+.config-panel {
+  width: 40%;
+  padding: 20px;
+  background: rgba(48, 48, 94, 0.9);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px; /* Shift right to avoid navbar */
+  color: white;
+}
+.config-panel h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 2px solid #ccc; /* Optional: Adds a border */
+  border-radius: 30px; /* Makes the edges rounded */
+  outline: none; /* Removes default focus outline */
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+  border-color: #007bff; /* Changes border color when focused */
+}
+
+.enter-button {
+  width: 40%;  /* Reduce the width */
+  height: 45px; /* Increase the height */
+  padding: 10px;
+  background-color: #62a3e9; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  align-self: center;
+}
+
+.enter-button:hover {
+  background-color: #0d5aab; /* Darker blue on hover */
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(-100vw); opacity: 0; } 
+  100% { transform: translateX(0); opacity: 1; } 
+}
+
+.slide h1 {
+  display: inline-block;
+  animation: slideIn 3s ease-in-out;
+}
+
+/* index.css - Default global styles for React project */
+
+
