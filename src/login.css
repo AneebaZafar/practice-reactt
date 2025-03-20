@@ -1,7 +1,10 @@
 .wrapper {
-    position: relative;
+    position: absolute; /* Change from relative to absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Moves the box exactly to the center */
     width: 420px;
-    height: 450px;
+    height: 500px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(40px);
@@ -9,9 +12,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: #fff;
     overflow: hidden;
-    transition: height 0.2s ease-in-out; /* Smooth height transition */
+    transition: height 0.2s ease-in-out;
     text-align: center;
 }
+
 .app-name {
     position: absolute;
     top: 20px;
@@ -102,6 +106,38 @@ form button {
 }
 
 .register-link p a:hover {
+    text-decoration: underline;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between; /* Space between checkbox & forgot password */
+    align-items: center;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px; /* Adjust spacing as needed */
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between checkbox and text */
+    color: white;
+}
+
+.remember-me input {
+    width: 14px;
+    height: 14px;
+    accent-color: white; /* Style checkbox color */
+}
+
+.forgot-password {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
     text-decoration: underline;
 }
 
