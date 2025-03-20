@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { FaArrowLeft } from "react-icons/fa";
 import axios from "axios";
 import Select from "react-select";
 import "./App.css";
@@ -67,6 +68,39 @@ const App = () => {
         setActivePanel(""); // Hide panel after saving
     };
 
+
+    // cuustom styles d=for search bar
+    const customStyles = {
+        control: (provided) => ({
+            ...provided,
+            backgroundColor: "black",
+            color: "white",
+            border: "1px solid white",
+            boxShadow: "none",
+            "&:hover": { borderColor: "gray" },
+        }),
+        menu: (provided) => ({
+            ...provided,
+            backgroundColor: "black",
+            border: "1px solid gray",
+        }),
+        option: (provided, state) => ({
+            ...provided,
+            backgroundColor: state.isFocused ? "gray" : "black",
+            color: "white",
+            borderBottom: "1px solid white", // Separator line
+            padding: 10,
+        }),
+        singleValue: (provided) => ({
+            ...provided,
+            color: "white",
+        }),
+        placeholder: (provided) => ({
+            ...provided,
+            color: "gray",
+        }),
+    };
+    
     return (
         <div className="app">
              <header className={`header ${isSliding ? "slide" : ""}`}>
@@ -89,6 +123,7 @@ const App = () => {
                         </>
                     ) : (
                         <>
+                        
                             <h2>Configure {configType}</h2>
 
                             <label>Select Telescope:</label>
@@ -97,6 +132,7 @@ const App = () => {
                                 onChange={setSelectedTelescope}
                                 isLoading={loading}
                                 placeholder="Search telescope..."
+                                styles={customStyles}
                             />
 
                             {configType === "Eyepiece" && (
@@ -107,6 +143,7 @@ const App = () => {
                                         onChange={setSelectedEyepiece}
                                         isLoading={loading}
                                         placeholder="Search eyepiece..."
+                                        styles={customStyles}
                                     />
                                 </>
                             )}
@@ -119,6 +156,7 @@ const App = () => {
                                         onChange={setSelectedCamera}
                                         isLoading={loading}
                                         placeholder="Search camera..."
+                                        styles={customStyles}
                                     />
 
                                     <label>Country:</label>
