@@ -1,6 +1,6 @@
 const planetImages = {
     moon: "https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg",
-    sun: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Solar_sys8.jpg",
+    sun: "https://upload.wikimedia.org/wikipedia/commons/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg",
     mercury: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg",
     venus: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg",
     mars: "https://upload.wikimedia.org/wikipedia/commons/5/56/Mars_Valles_Marineris.jpeg",
